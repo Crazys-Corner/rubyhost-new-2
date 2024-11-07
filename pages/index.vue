@@ -3,6 +3,10 @@ import Lenis from '@studio-freight/lenis';
 import { onMounted } from 'vue';
 import gsap from 'gsap';
 
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+if (!isMobileDevice()) {
 onMounted(() => {
   const lenis = new Lenis({
     smooth: true,
@@ -34,6 +38,7 @@ onMounted(() => {
 
   requestAnimationFrame(raf);
 });
+}
 </script>
 
 
