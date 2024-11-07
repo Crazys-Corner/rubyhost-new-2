@@ -12,24 +12,34 @@ const heroImage = ref(null);
 const serverImage = ref(null); // New ref for the image
 const buttonsContainer = ref(null);
 
-onMounted(() => {
-  // Initialize Lenis for smooth scrolling
-  const lenis = new Lenis({
-    smooth: true,
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smoothTouch: true,
-    touchMultiplier: 2,
-  });
-
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+// Function to detect mobile devices
+function isMobileDevice() {
+  if (typeof navigator !== 'undefined') {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   }
-  requestAnimationFrame(raf);
+  return false;
+}
 
-  // Integrate Lenis with ScrollTrigger
-  lenis.on('scroll', ScrollTrigger.update);
+onMounted(() => {
+  // Initialize Lenis for smooth scrolling only on non-mobile devices
+  if (!isMobileDevice()) {
+    const lenis = new Lenis({
+      smooth: true,
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smoothTouch: false, // Disable smooth touch to prevent interference with touch scrolling
+      touchMultiplier: 2,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Integrate Lenis with ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+  }
 
   // Create a timeline for better animation control
   const tl = gsap.timeline({
@@ -60,13 +70,22 @@ onMounted(() => {
     duration: 1.2
   }, "-=1");
 
-  // Animate hero image with scale effect
-  tl.to(serverImage.value, {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    duration: 1.2,
-  }, "-=0.8");
+  // Animate server image with scale effect, only on non-mobile devices
+  if (!isMobileDevice()) {
+    tl.to(serverImage.value, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 1.2,
+    }, "-=0.8");
+  } else {
+    // On mobile devices, show the image without animation
+    gsap.set(serverImage.value, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+    });
+  }
 
   // Animate buttons without any scroll trigger
   tl.to(buttonsContainer.value.querySelectorAll('a'), {
@@ -76,23 +95,21 @@ onMounted(() => {
     stagger: 0.15
   }, "-=0.1");
 
-  // Scroll-triggered animation for the server image only
-  gsap.to(serverImage.value, {
-    y: 100,
-    opacity: 0.5,
-    scrollTrigger: {
-      trigger: heroSection.value,
-      start: "top top",
-      end: "bottom top",
-      scrub: true
-    }
-  });
+  // Scroll-triggered animation for the server image only on non-mobile devices
+  if (!isMobileDevice()) {
+    gsap.to(serverImage.value, {
+      y: 100,
+      opacity: 0.5,
+      scrollTrigger: {
+        trigger: heroSection.value,
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  }
 });
 </script>
-
-
-
-
 <template>
   <div data-scroll-container>
     <Navbar />
@@ -122,16 +139,16 @@ onMounted(() => {
         <img
           src="/assets/serverimage.png"
           alt="Server"
-          class="rounded-lg shadow-xl w-full md:w-5/6 object-cover hidden sm:block opacity-25 transform"
+          class="rounded-lg shadow-xl w-full md:w-5/6 object-cover block sm:block opacity-25 transform"
         />
-        <!-- Buttons Container - Fixed ref -->
+        <!-- Buttons Container -->
         <div 
           ref="buttonsContainer"
-          class="absolute bottom-4 left-10 sm:left-20 md:left-32 flex flex-col space-y-4 w-full sm:w-auto"
+          class="mt-6 md:mt-0 md:absolute md:bottom-4 md:left-10 sm:left-20 md:left-32 flex flex-col space-y-4 w-full sm:w-auto items-center md:items-start"
         >
           <NuxtLink
             to="/get-started"
-            class="bg-gray-950 font-light text-gray-300 font-semibold py-3 px-4 rounded-md hover:bg-gray-900 border-2 border-gray-800 flex items-center justify-center space-x-2 transition duration-200 ease-in-out group"
+            class="bg-gray-950 font-light text-gray-300 font-semibold py-3 px-4 rounded-md hover:bg-gray-900 border-2 border-gray-800 flex items-center justify-center space-x-2 transition duration-200 ease-in-out group w-3/4 sm:w-auto"
           >
             <span>Get Started</span>
             <span aria-hidden="true" class="material-icons text-red-500 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
@@ -140,7 +157,7 @@ onMounted(() => {
           </NuxtLink>
           <NuxtLink
             to="/contact"
-            class="bg-gray-950 font-semibold text-gray-300 py-3 px-4 rounded-md hover:bg-gray-900 border-2 border-gray-800 flex items-center justify-center space-x-2 transition duration-200 ease-in-out group"
+            class="bg-gray-950 font-semibold text-gray-300 py-3 px-4 rounded-md hover:bg-gray-900 border-2 border-gray-800 flex items-center justify-center space-x-2 transition duration-200 ease-in-out group w-3/4 sm:w-auto"
           >
             <span>Contact Us</span>
             <span aria-hidden="true" class="material-icons text-red-500 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">
@@ -152,9 +169,18 @@ onMounted(() => {
     </section>
   </div>
 </template>
-<style>
+<style scoped>
+/* Remove the !important to allow GSAP animations */
 a {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+  /* opacity: 1 !important;
+  transform: translateY(0) !important; */
+}
+
+/* Adjust styles for mobile devices */
+@media (max-width: 767px) {
+  /* Ensure the image is visible on mobile devices */
+  img {
+    opacity: 1 !important;
+  }
 }
 </style>
