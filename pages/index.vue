@@ -6,7 +6,7 @@ import gsap from 'gsap';
 onMounted(() => {
 
 
-  if (!ScrollTrigger.isTouch) {
+  
     const lenis = new Lenis({
       smooth: true,
       direction: 'vertical',
@@ -14,7 +14,7 @@ onMounted(() => {
       smoothTouch: true,
       touchMultiplier: 0,
     });
-
+    if (!ScrollTrigger.isTouch) {
     lenis.on('scroll', (e) => {
       // Custom GSAP animations can be triggered here
       gsap.to('.animate-class', {
