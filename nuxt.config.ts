@@ -9,5 +9,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  build: {
+    transpile: [
+      "gsap"
+    ]
+  },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon',  "nuxt3-lenis", "@hypernym/nuxt-gsap"],
 })
