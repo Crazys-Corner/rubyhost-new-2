@@ -15,7 +15,7 @@ onMounted(() => {
       direction: 'vertical',
       gestureDirection: 'vertical',
       smoothTouch: true,
-      touchMultiplier: 2,
+      touchMultiplier: 0,
     });
 
     lenis.on('scroll', (e) => {
