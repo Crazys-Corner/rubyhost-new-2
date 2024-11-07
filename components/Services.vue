@@ -1,19 +1,21 @@
 <template>
     <div class="service-section bg-dark p-8 text-center flex items-center justify-between">
-      <div>
-        <button class="get-started-btn bg-gray-700 text-white py-2 px-4 rounded-md mb-4">
+      <div class="text-left ml-20">
+        <button class="get-started-btn  text-left bg-gray-700 text-white py-2 px-4 rounded-md mb-4">
           Get Started with RubyHost
         </button>
-        <h1 class="text-white text-5xl font-bold mb-2">Services</h1>
+        <h1 class="text-white text-5xl font-bold mb-2 text-left">Services</h1>
         <p class="text-gray-400">
           Please check below for our additional services that RubyHost provides.
         </p>
       </div>
       <img src="@/assets/logo.svg" alt="RubyHost Logo" class="service-logo w-48" />
-      <button class="shop-now-btn bg-gray-700 text-white py-2 px-4 rounded-md flex items-center">
-        Shop Now
-        <span class="ml-2 text-red-500">&#10148;</span>
-      </button>
+      <div class="mr-20">
+        <button class="shop-now-btn bg-gray-700 text-white py-2 px-4 rounded-md flex items-center">
+          Shop Now
+          <span class="ml-2 text-red-500">&#10148;</span>
+        </button>
+      </div>
     </div>
   </template>
   
