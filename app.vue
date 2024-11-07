@@ -1,5 +1,5 @@
 <template>
-<NuxtPage v-locomotive  />
+<NuxtPage />
 </template>
 <style>
 
