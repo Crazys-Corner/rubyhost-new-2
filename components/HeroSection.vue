@@ -137,7 +137,7 @@ onMounted(() => {
         class="md:w-1/2 md:relative md:flex justify-center md:justify-end"
       >
         <img
-          src="/assets/serverimage.png"
+          src="/assets/background.png"
           alt="Server"
           class="rounded-lg shadow-xl w-full md:w-5/6 object-cover block sm:block opacity-25 transform"
         />
