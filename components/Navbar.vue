@@ -1,7 +1,7 @@
 <template>
   <!-- Mobile Top Bar -->
   <div @click="isOpen = true" class="md:hidden fixed top-0 left-0 right-0 flex justify-center items-center h-6 z-50">
-    <div class="w-10 h-1 bg-white rounded-full mt-2"></div>
+    <div class="w-24 h-1 bg-white rounded-full mt-2"></div>
   </div>
 
   <!-- Mobile Menu -->
