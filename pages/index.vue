@@ -4,12 +4,9 @@ import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
 
 onMounted(() => {
-  // This code runs only on the client side
-  function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-  }
 
-  if (!isMobileDevice()) {
+
+  if (!ScrollTrigger.isTouch) {
     const lenis = new Lenis({
       smooth: true,
       direction: 'vertical',
