@@ -2,6 +2,11 @@
 import { onMounted } from 'vue';
 import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 onMounted(() => {
 
