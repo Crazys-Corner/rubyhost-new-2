@@ -137,14 +137,14 @@ onMounted(() => {
         class="md:w-1/2 md:relative md:flex justify-center md:justify-end"
       >
         <img
-          src="/assets/background.png"
+          src="/assets/logo.svg"
           alt="Server"
           class="rounded-lg shadow-xl w-full md:w-5/6 object-cover block sm:block opacity-25 transform"
         />
         <!-- Buttons Container -->
         <div 
           ref="buttonsContainer"
-          class="mt-6 md:mt-0 md:absolute md:bottom-4 md:left-10 sm:left-20 md:left-32 flex flex-col space-y-4 w-full sm:w-auto items-center md:items-start"
+          class="mt-6 md:mt-0 md:absolute md:bottom-48 md:left-48 sm:left-20 md:left-32 flex flex-col space-y-4 w-full sm:w-auto items-center md:items-start"
         >
           <NuxtLink
             to="/get-started"
