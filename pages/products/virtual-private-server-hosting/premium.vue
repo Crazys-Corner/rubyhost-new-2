@@ -55,7 +55,7 @@ onMounted(() => {
     </div>
 
     <div>
-      <MinecraftServers data-scroll />
+      <VPS-premium data-scroll />
 
   
     </div>
