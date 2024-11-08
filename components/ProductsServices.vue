@@ -215,7 +215,7 @@ onMounted(() => {
      
     </div>
     <div class="px-48 pt-12  ">
-    <Services class="border-2 border-gray-800"/>
+
   </div> 
   </section>
 </template>

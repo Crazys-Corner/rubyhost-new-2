@@ -8,12 +8,12 @@
         v-observe
       >
         <h2 class="text-3xl font-semibold mb-4">Have more questions?</h2>
-        <button
+        <NuxtLink to="/contact"
           class="mt-2 bg-transparent border border-gray-700 hover:border-gray-500 text-white py-2 px-4 rounded-md flex items-center space-x-2 focus:outline-none transition-transform transform hover:scale-105 duration-300"
         >
           <span>Contact Us</span>
           <Icon name="lineicons:arrow-angular-top-right" class="text-red-500" />
-        </button>
+        </NuxtLink>
       </div>
 
       <!-- Vertical Divider (visible on larger screens) -->

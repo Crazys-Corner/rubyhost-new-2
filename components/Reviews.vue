@@ -16,12 +16,12 @@
               What Our <span class="text-red-500">Clients Say</span>
             </h2>
           </div>
-          <button
+          <a href="https://trustpilot.com/review/rubyhost.net" target="_blank"
             class="bg-gray-950 text-gray-300 border border-gray-800 px-6 py-2 mt-4 md:mt-0 text-sm flex items-center space-x-2 hover:bg-gray-900 transition-colors duration-300"
           >
             <span>TrustPilot</span>
             <Icon name="lineicons:arrow-angular-top-right" class="text-red-500" />
-          </button>
+        </a>
         </div>
       </Transition>
     </div>

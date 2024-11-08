@@ -59,7 +59,7 @@ onMounted(() => {
 
   
     </div>
-
+  
     <div data-scroll-section>
       <Reviews data-scroll />
     </div>
