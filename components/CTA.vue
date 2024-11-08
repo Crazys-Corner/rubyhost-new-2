@@ -5,12 +5,12 @@
   >
     <!-- Left Section -->
     <div ref="leftContent" class="space-y-4 text-center md:text-left">
-      <button 
+      <span 
         ref="startButton"
         class="self-start px-4 py-2 text-sm font-medium text-white bg-[#333540] rounded hover:bg-[#444650] transition-colors duration-300"
       >
         Get Started with RubyHost
-      </button>
+    </span>
       <h1 
         ref="headline"
         class="text-3xl sm:text-4xl md:text-5xl font-extrabold"
@@ -38,7 +38,8 @@
 
     <!-- Right Button -->
     <div ref="rightContent" class="text-center md:text-right">
-      <button 
+      <NuxtLink 
+      to= "/products" 
         ref="servicesButton"
         class="group px-4 py-2 font-semibold text-gray-300 bg-gray-950 border-2 border-gray-800 flex items-center space-x-2 rounded hover:bg-gray-900 transition-colors duration-300"
         @mouseenter="animateArrow"
@@ -49,7 +50,7 @@
           name="lineicons:arrow-angular-top-right" 
           class="text-red-500"
         />
-      </button>
+    </NuxtLink>
     </div>
   </div>
 </template>

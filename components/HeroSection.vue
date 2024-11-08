@@ -147,7 +147,7 @@ onMounted(() => {
           class="mt-6 md:mt-0 md:absolute md:bottom-48 md:left-48 sm:left-20 md:left-32 flex flex-col space-y-4 w-full sm:w-auto items-center md:items-start"
         >
           <NuxtLink
-            to="/get-started"
+            to="/products"
             class="bg-gray-950 font-light text-gray-300 font-semibold py-3 px-4 rounded-md hover:bg-gray-900 border-2 border-gray-800 flex items-center justify-center space-x-2 transition duration-200 ease-in-out group w-3/4 sm:w-auto"
           >
             <span>Get Started</span>

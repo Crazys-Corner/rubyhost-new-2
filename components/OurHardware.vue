@@ -86,14 +86,15 @@
               {{ displayedPlan.promoDescription }}
             </p>
           </div>
-          <button
+          <NuxtLink
             class="flex items-center justify-center px-3 ml-0 md:ml-4 mt-4 md:mt-0 text-sm py-3 bg-gray-950 border-2 border-gray-800 text-white font-medium hover:text-red-500"
-          >
+            to="/products"
+            >
             Get Started
             <span class="ml-1 text-red-400">
               <Icon name="lineicons:arrow-angular-top-right" class="text-red-500" />
             </span>
-          </button>
+          </NuxtLink>
         </div>
 
         <!-- Specifications -->
