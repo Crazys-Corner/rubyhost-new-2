@@ -51,11 +51,12 @@ onMounted(() => {
     <Navbar />
 
     <div>
-      <MinecraftHero ata-scroll />
+      <ColoHero Data-scroll />
     </div>
 
-    <div>
-      <ProductsServices data-scroll />
+    <div class="px-24 bg-black">
+      <ColocationConfigurator data-scroll />
+      
 
   
     </div>

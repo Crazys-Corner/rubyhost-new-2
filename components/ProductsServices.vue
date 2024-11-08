@@ -197,14 +197,14 @@ onMounted(() => {
           class="rounded-lg w-full h-48 object-cover mb-4 transition-transform duration-300 group-hover:scale-105"
         />
         <div class="flex-grow">
-          <h3 class="text-xl font-semibold mb-2">Game Hosting</h3>
+          <h3 class="text-xl font-semibold mb-2">Dedicated Server Hosting</h3>
           <p class="text-gray-400 mb-6">
-            Game Hosting for numerous mainstream games. Low latency, high uptime, DDoS protection, professional support and performance guaranteed.
+            Built for those who need absolute power and control. Our dedicated servers are fully customizable and come with a range of options to suit your needs.
           </p>
         </div>
         <div class="flex justify-center">
           <NuxtLink
-            to="/products/game-hosting"
+            to="/dedicated-servers"
             class="border border-gray-800 text-gray-300 py-2 px-4 w-full text-center rounded-md hover:bg-gray-800 transition-all duration-300 group-hover:border-red-500"
           >
             Learn More
@@ -212,7 +212,31 @@ onMounted(() => {
         </div>
      
       </div>
+      <div 
+        ref="card3" 
+        class="bg-gray-950 p-6 rounded-lg shadow-md transition-all duration-300 flex flex-col group"
+      >
+        <img
+          src="/assets/gamehosting.png"
+          alt="Game Hosting"
+          class="rounded-lg w-full h-48 object-cover mb-4 transition-transform duration-300 group-hover:scale-105"
+        />
+        <div class="flex-grow">
+          <h3 class="text-xl font-semibold mb-2">Colocation</h3>
+          <p class="text-gray-400 mb-6">
+            For those wanting to operate everything on their own hardware. We provide the space, power, and network to keep your servers running smoothly.
+          </p>
+        </div>
+        <div class="flex justify-center">
+          <NuxtLink
+            to="/products/colocation"
+            class="border border-gray-800 text-gray-300 py-2 px-4 w-full text-center rounded-md hover:bg-gray-800 transition-all duration-300 group-hover:border-red-500"
+          >
+            Learn More
+          </NuxtLink>
+        </div>
      
+      </div>
     </div>
     <div class="px-48 pt-12  ">
 
