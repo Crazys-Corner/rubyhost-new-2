@@ -117,9 +117,14 @@
           </div>
         </div>
         <div class="text-center mt-4">
-          <p class="text-4xl font-bold">Total: <span class="text-red-500">${{ total }}</span></p>
+          <p class="text-4xl font-bold mb-4">Total: <span class="text-red-500">${{ total }}</span></p>
+          <NuxtLink to="/contact" class="bg-red-500 text-white py-3 px-4 rounded-md">
+          Contact Us
+        </NuxtLink>
         </div>
+
       </div>
+ 
     </div>
   </template>
   
