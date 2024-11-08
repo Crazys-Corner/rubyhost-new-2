@@ -93,16 +93,36 @@ export default {
     };
   },
   methods: {
-    handleSubmit() {
-      alert(`Thank you, ${this.form.name}, for reaching out! We will get back to you soon.`);
-      // You can integrate a backend API here to send the form data
-      this.form.name = '';
-      this.form.email = '';
-      this.form.message = '';
+    async handleSubmit() {
+      try {
+        const response = await $fetch('/api/contact', {
+          method: 'POST',
+          body: {
+            name: this.form.name,
+            email: this.form.email,
+            message: this.form.message
+          }
+        });
+
+        if (response.status === 200) {
+          alert('Thank you for your message! We will get back to you soon.');
+        } else {
+          alert('There was an error sending your message. Please try again.');
+        }
+
+        // Clear the form
+        this.form.name = '';
+        this.form.email = '';
+        this.form.message = '';
+      } catch (error) {
+        console.error('Error sending form data:', error);
+        alert('An unexpected error occurred. Please try again later.');
+      }
     }
   }
 };
 </script>
+
 
 <style scoped>
 /* Add any additional custom styling if needed */
