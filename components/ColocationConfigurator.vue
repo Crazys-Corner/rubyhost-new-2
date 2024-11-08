@@ -139,60 +139,67 @@
     },
     computed: {
       spacePrice() {
-        return (11.5 * this.space * 1.2).toFixed(2)
+        return (11.5 * this.space * 1.2).toFixed(2);
       },
       powerPrice() {
-        return (15 * this.power * 1.2).toFixed(2)
+        return (15 * this.power * 1.2).toFixed(2);
       },
       networkPrice() {
         const basePrices = {
           1: 30,   // Base price for 1 Gbps
-          10: 300  // Base price for 10 Gbps
-        }
-        return (basePrices[this.networkSpeed] * 1.2).toFixed(2)
+          10: 30  // Base price for 10 Gbps
+        };
+        return (basePrices[this.networkSpeed] * 1.2).toFixed(2);
       },
       trafficPrice() {
-        return this.networkSpeed === 1
-          ? '0.00'
-          : (this.traffic * 3).toFixed(2)
+        if (this.networkSpeed === 1) {
+          return '0.00';
+        } else {
+          const trafficValue = parseFloat(this.traffic);
+          return isNaN(trafficValue) ? '0.00' : (trafficValue * 3).toFixed(2);
+        }
       },
       total() {
-        return (
-          parseFloat(this.spacePrice) +
-          parseFloat(this.powerPrice) +
-          parseFloat(this.networkPrice) +
+        const totalPrice = [
+          parseFloat(this.spacePrice),
+          parseFloat(this.powerPrice),
+          parseFloat(this.networkPrice),
           parseFloat(this.trafficPrice)
-        ).toFixed(2)
+        ].reduce((acc, value) => acc + (isNaN(value) ? 0 : value), 0);
+  
+        return totalPrice.toFixed(2);
       }
     },
     methods: {
       setNetworkSpeed(value) {
-        this.networkSpeed = value
+        this.networkSpeed = value;
         if (value === 1) {
-          this.traffic = 'Fair Use, Unmetered'
-        } else if (this.traffic === 'Fair Use, Unmetered') {
-          this.traffic = 10
+          this.traffic = 'Fair Use, Unmetered';
+        } else {
+          // Reset traffic to a default numeric value when switching to 10 Gbps
+          this.traffic = 10;
         }
       },
       incrementSpace() {
-        this.space = Math.min(this.space + 1, 50)
+        this.space = Math.min(this.space + 1, 50);
       },
       decrementSpace() {
-        this.space = Math.max(this.space - 1, 1)
+        this.space = Math.max(this.space - 1, 1);
       },
       incrementPower() {
-        this.power = Math.min(this.power + 1, 100)
+        this.power = Math.min(this.power + 1, 100);
       },
       decrementPower() {
-        this.power = Math.max(this.power - 1, 1)
+        this.power = Math.max(this.power - 1, 1);
       },
       incrementTraffic() {
-        this.traffic = Math.min(this.traffic + 10, 1000)
+        this.traffic = Math.min(this.traffic + 10, 1000);
       },
       decrementTraffic() {
-        this.traffic = Math.max(this.traffic - 10, 10)
+        this.traffic = Math.max(this.traffic - 10, 10);
       }
     }
   }
   </script>
+  
   
