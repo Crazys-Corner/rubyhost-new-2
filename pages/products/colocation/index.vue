@@ -54,7 +54,7 @@ onMounted(() => {
       <ColoHero Data-scroll />
     </div>
 
-    <div class="px-24 bg-black">
+    <div class="md:px-24 bg-black">
       <ColocationConfigurator data-scroll />
       
 
