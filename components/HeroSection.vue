@@ -180,7 +180,7 @@ a {
 @media (max-width: 767px) {
   /* Ensure the image is visible on mobile devices */
   img {
-    opacity: 1 !important;
+    opacity: 1;
   }
 }
 </style>

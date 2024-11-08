@@ -103,7 +103,7 @@ onMounted(() => {
     <!-- Header Section -->
     <div
       ref="headerRef"
-      class="text-left mb-12 flex flex-col items-center sm:flex-row sm:justify-between sm:items-center sm:ml-10 sm:mb-16 px-36"
+      class="text-left mb-12 flex flex-col items-center sm:flex-row sm:justify-between sm:items-center sm:ml-10 sm:mb-16 md:px-36"
     >
       <div class="text-center sm:text-left">
         <div

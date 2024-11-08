@@ -51,7 +51,7 @@
     </div>
   </div>
   <button
-    class="hover:underline flex items-center bg-gray-950 border-2 border-gray-800 p-2 text-gray-400 text-xs md:text-sm"
+    class="hover:underline flex items-center bg-gray-950 border-2 border-gray-800 p-2 text-gray-400 text-xs md:text-sm mx-auto md:mx-0"
   >
     Order Now
     <Icon
