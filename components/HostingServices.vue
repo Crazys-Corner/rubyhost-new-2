@@ -115,7 +115,7 @@ onMounted(() => {
           Our <span class="text-red-500">Hosting</span> Solutions
         </h2>
       </div>
-      <button
+      <NuxtLink to="/products"
         class="mt-4 sm:mt-0 bg-gray-950 text-gray-300 border border-gray-800 px-6 py-2 text-sm flex items-center space-x-2 hover:bg-gray-900 transition-all duration-300 group"
       >
         <span>View All Services</span>
@@ -123,7 +123,7 @@ onMounted(() => {
           name="lineicons:arrow-angular-top-right" 
           class="text-red-500 transform transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" 
         />
-      </button>
+      </NuxtLink>
     </div>
     <hr class="border-1 border-gray-700 mb-8 transform-origin-left" />
 
