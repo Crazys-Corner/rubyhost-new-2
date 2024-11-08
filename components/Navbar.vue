@@ -25,6 +25,7 @@
         <li><NuxtLink to="/about" @click="isOpen = false" class="hover:text-red-500">About</NuxtLink></li>
         <li><NuxtLink to="/products" @click="isOpen = false" class="hover:text-red-500">Products</NuxtLink></li>
         <li><NuxtLink to="/dedicated-servers" @click="isOpen = false" class="hover:text-red-500">Dedicated Servers</NuxtLink></li>
+        <li><NuxtLink to="/products/colocation" @click="isOpen = false" class="hover:text-red-500">Colocation</NuxtLink></li>
         <li><NuxtLink to="/network" @click="isOpen = false" class="hover:text-red-500">Our Network</NuxtLink></li>
         <li><NuxtLink to="/contact" @click="isOpen = false" class="hover:text-red-500">Contact</NuxtLink></li>
         <li><NuxtLink to="/legal" @click="isOpen = false" class="hover:text-red-500">Legal</NuxtLink></li>
@@ -52,6 +53,7 @@
       <li><NuxtLink to="/about" class="hover:text-white">About</NuxtLink></li>
       <li><NuxtLink to="/products" class="hover:text-white">Products</NuxtLink></li>
       <li><NuxtLink to="/dedicated-servers" class="hover:text-white">Dedicated Servers</NuxtLink></li>
+      <li><NuxtLink to="/products/colocation" class="hover:text-white">Colocation</NuxtLink></li>
       <li><NuxtLink to="/network" class="hover:text-white">Our Network</NuxtLink></li>
       <li><NuxtLink to="/contact" class="hover:text-white">Contact</NuxtLink></li>
       <li><NuxtLink to="/legal" class="hover:text-white">Legal</NuxtLink></li>
