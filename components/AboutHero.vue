@@ -1,5 +1,5 @@
 <template>
-    <div class="relative bg-black text-white pt-48">
+    <div class="relative bg-black text-white md:pt-48">
       <div class="absolute inset-0">
         <img
           src="/assets/background.png" 
