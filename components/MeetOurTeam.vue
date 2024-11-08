@@ -63,7 +63,7 @@
           <div class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-red-500 text-white rounded-full">2</div>
           <div class="mt-4 sm:mt-0 sm:mr-6 bg-gray-950 border-2 border-gray-800 p-4 sm:p-6 rounded-md w-full">
             <h4 class="text-lg sm:text-xl font-semibold">August 2024</h4>
-            <p class="text-gray-400 text-sm sm:text-base">RubyHost has started demoing services to clients.</p>
+            <p class="text-gray-400 text-sm sm:text-base">RubyHost has started demoing services to it's clients.</p>
           </div>
         </div>
 
@@ -71,19 +71,20 @@
           <div class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-red-500 text-white rounded-full">3</div>
           <div class="mt-4 sm:mt-0 sm:ml-6 bg-gray-950 border-2 border-gray-800 p-4 sm:p-6 rounded-md w-full">
             <h4 class="text-lg sm:text-xl font-semibold">October 2024</h4>
-            <p class="text-gray-400 text-sm sm:text-base">We have opened services publicly to all prospective clients.</p>
+            <p class="text-gray-400 text-sm sm:text-base">Public beta of RubyHost's game hosting released.</p>
           </div>
         </div>
 
         <div class="flex flex-col sm:flex-row-reverse items-center opacity-0 transform translate-y-8 transition-all duration-700" ref="step4">
           <div class="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center bg-red-500 text-white rounded-full">4</div>
           <div class="mt-4 sm:mt-0 sm:mr-6 bg-gray-950 border-2 border-gray-800 p-4 sm:p-6 rounded-md w-full">
-            <h4 class="text-lg sm:text-xl font-semibold">November 2024</h4>
-            <p class="text-gray-400 text-sm sm:text-base">Introduced all our current machines and deployment systems.</p>
+            <h4 class="text-lg sm:text-xl font-semibold">December 2024</h4>
+            <p class="text-gray-400 text-sm sm:text-base">ASN (AS401477) was given to RubyHost by the ARIN and RubyHost moves into it's first datacenter.</p>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+ 
   </section>
 </template>
 
@@ -115,51 +116,91 @@ export default {
         },
         {
           image: daniel,
-          name: 'Logan Byers',
-          position: 'Chief Financial Officer',
-          description: 'Logan oversees billing and management of RubyHost.',
-          tags: ['Executive', 'Finance'],
+          name: 'Cameron Khouri',
+          position: 'Chief Technology Officer',
+          description: 'Cam oversees everything on the technical side. He is the person behind our infrastructure, hardware deployments and more.',
+          tags: ['Executive', 'Technology'],
           team: 'Executive Team',
         },
         {
           image: daniel,
-          name: 'Logan Byers',
-          position: 'Chief Financial Officer',
-          description: 'Logan oversees billing and management of RubyHost.',
-          tags: ['Executive', 'Finance'],
-          team: 'Marketing Team',
+          name: 'Xander DeAngelo',
+          position: 'Chief Operating Officer',
+          description: 'Xander oversees everything related to day to day operations. From hiring new support staff, to advertisement and marketing, Xander is the go to for first point of contact.',
+          tags: ['Executive', 'Operations'],
+          team: 'Executive Team',
         },
         {
           image: daniel,
-          name: 'Logan Byers',
-          position: 'Chief Financial Officer',
-          description: 'Logan oversees billing and management of RubyHost.',
-          tags: ['Executive', 'Finance'],
+          name: 'Xander DeAngelo',
+          position: 'Chief Operating Officer',
+          description: 'Xander oversees everything related to day to day operations. From hiring new support staff, to advertisement and marketing, Xander is the go to for first point of contact.',
+          tags: ['Executive', 'Operations'],
           team: 'Media Team',
         },
         {
           image: daniel,
-          name: 'Logan Byers',
-          position: 'Chief Financial Officer',
-          description: 'Logan oversees billing and management of RubyHost.',
-          tags: ['Executive', 'Finance'],
-          team: 'DevOps Team',
-        },
-        {
-          image: daniel,
-          name: 'Logan Byers',
-          position: 'Chief Financial Officer',
-          description: 'Logan oversees billing and management of RubyHost.',
-          tags: ['Executive', 'Finance'],
+          name: 'Xander DeAngelo',
+          position: 'Chief Operating Officer',
+          description: 'Xander oversees everything related to day to day operations. From hiring new support staff, to advertisement and marketing, Xander is the go to for first point of contact.',
+          tags: ['Executive', 'Operations'],
           team: 'Design Team',
         },
         {
           image: daniel,
-          name: 'Logan Byers',
-          position: 'Chief Financial Officer',
-          description: 'Logan oversees billing and management of RubyHost.',
-          tags: ['Executive', 'Finance'],
+          name: 'Xander DeAngelo',
+          position: 'Chief Operating Officer',
+          description: 'Xander oversees everything related to day to day operations. From hiring new support staff, to advertisement and marketing, Xander is the go to for first point of contact.',
+          tags: ['Executive', 'Operations'],
+          team: 'Marketing Team',
+        },
+        {
+          image: daniel,
+          name: '\'Kiter\'',
+          position: 'Discord Management',
+          description: 'Kiter oversees and manages our discord server. He maintains a professional outlook and helps direct customers in the directions they need to go for their inquiries.',
+          tags: ['Management', 'Social Media'],
+          team: 'Media Team',
+        },
+        {
+          image: daniel,
+          name: 'Sakariye M',
+          position: 'P3 Support',
+          description: 'Sakariye assists users with day to day issues and inqueries.',
+          tags: ['Support'],
           team: 'Support Team',
+        },
+        {
+          image: daniel,
+          name: '\'Iron\'',
+          position: 'P3 Support',
+          description: 'Iron assists users with day to day issues and inqueries.',
+          tags: ['Support'],
+          team: 'Support Team',
+        },
+        {
+          image: daniel,
+          name: 'Jokūbas P',
+          position: 'P3 Support',
+          description: 'Jokūbas assists users with day to day issues and inqueries.',
+          tags: ['Support'],
+          team: 'Support Team',
+        },
+        {
+          image: daniel,
+          name: 'Zephyr M',
+          position: 'P3 Support',
+          description: 'Zephyr assists users with day to day issues and inqueries.',
+          tags: ['Support'],
+          team: 'Support Team',
+        },
+        {
+          image: daniel,
+          name: 'Parker S',
+          position: 'DevOps Engineer',
+          description: 'Parker is behind majority of the deployments and updates to our systems, as well as development behind most RubyHost additive websites and content.',
+          tags: ['DevOps'],
+          team: 'DevOps Team',
         },
 
         // ... other team members ...
@@ -212,6 +253,7 @@ export default {
           this.$refs.step2,
           this.$refs.step3,
           this.$refs.step4,
+ 
         ];
 
         this.observer = new IntersectionObserver(
