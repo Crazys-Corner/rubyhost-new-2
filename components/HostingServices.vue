@@ -150,7 +150,7 @@ onMounted(() => {
         </div>
         <div class="flex justify-center">
           <NuxtLink
-            to="/minecraft-hosting"
+            to="/products/minecraft-server-hosting"
             class="border border-gray-800 text-gray-300 py-2 px-4 w-full text-center rounded-md hover:bg-gray-800 transition-all duration-300 group-hover:border-red-500"
           >
             Learn More
@@ -177,7 +177,7 @@ onMounted(() => {
         </div>
         <div class="flex justify-center">
           <NuxtLink
-            to="/vps-hosting"
+            to="/products/virtual-private-server-hosting"
             class="border border-gray-800 text-gray-300 py-2 px-4 w-full text-center rounded-md hover:bg-gray-800 transition-all duration-300 group-hover:border-red-500"
           >
             Learn More
@@ -204,7 +204,7 @@ onMounted(() => {
         </div>
         <div class="flex justify-center">
           <NuxtLink
-            to="/game-hosting"
+            to="/products/game-hosting"
             class="border border-gray-800 text-gray-300 py-2 px-4 w-full text-center rounded-md hover:bg-gray-800 transition-all duration-300 group-hover:border-red-500"
           >
             Learn More
