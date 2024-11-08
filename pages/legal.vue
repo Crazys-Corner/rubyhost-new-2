@@ -143,9 +143,9 @@ export default {
   name: 'LegalDocsLayout',
   data() {
     return {
-      title: 'Legal Document',
-      company: 'Ruby Host',
-      publicationDate: 'October 15, 2023',
+      title: 'RubyHost Legal Documentation',
+      company: 'RubyHost',
+      publicationDate: 'October 15, 2024',
       lastUpdate: 'October 15, 2023',
       activeSection: 'introduction',
       about: 'Your company description here',
